@@ -21,14 +21,15 @@
       }
 
       h1 {
-        color: #375e97;
+        color: hotpink;
         font-size: 2em;
         font-family: Georgia, "Times New Roman", Times, serif;
-        border-bottom: 1px solid #375e97;
+        border-bottom: 1px dotted purple;
       }
 
       h2 {
         font-size: 1.5em;
+        font-style: italic;
       }
 
       .job-title {
@@ -42,8 +43,16 @@
       }
 
       a:hover {
+        color: green;
         text-decoration: none;
       }
+
+      .contact {
+        background-color: #eeeeee;
+        border: 5px solid purple;
+        padding: auto;
+      }
+
     </style>
   </head>
 
@@ -64,7 +73,7 @@
     </p>
 
     <h2>Contact information</h2>
-    <ul>
+    <ul class="contact">
       <li>
         Email:
         <a href="mailto:jane@example.com">jane@example.com</a>
