@@ -1,5 +1,16 @@
 html {
     font-family: sans-serif;
   }
-  
+
   /* Your CSS below here */
+
+#box {
+    width: 200px;
+    height: 200px;
+    border: #000000 2px solid;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
