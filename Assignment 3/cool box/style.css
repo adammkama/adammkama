@@ -7,7 +7,7 @@ html {
 #box {
     width: 200px;
     height: 200px;
-    border: #000000 2px solid;
+    border: darkcyan 1px solid;
     border-radius: 10px;
     display: flex;
     text-align: center;
