@@ -68,6 +68,38 @@ p {
 
 a {
  font-size: 1rem;
+  text-decoration: underline;
+  color: #a66;
+}
+
+a:visited {
+  color: rgb(250, 169, 169);
+}
+
+a:hover {
+  color: #f00;
+  text-decoration: none;
+}
+
+a:focus {
+  color: rgb(151, 0, 0);
+  text-decoration: none;
+  outline: none;
+}
+
+a:active {
+  color: rgb(255, 255, 255);
+  background-color: #a66;
+}
+
+a[href^="http"]::after {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-image: url(external-link-52.png);
+  background-size: contain;
+  
 }
 
 li {
