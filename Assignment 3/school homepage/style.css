@@ -104,6 +104,7 @@ a[href^="http"]::after {
 
 li {
   font-size: 1rem;
+  list-style-type: square;
 }
 
 section h1 + p, section h2 + p {
