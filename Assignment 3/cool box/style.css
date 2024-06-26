@@ -13,4 +13,5 @@ html {
     justify-content: center;
     align-items: center;
     margin: auto;
+    font-size: 1.125rem; /* 1rem = 16px. 18/16 = 1.125 so 1.125rem = 18px */
 }
