@@ -52,6 +52,46 @@ class EvilCircle extends Shape {
           });
           
     }
+
+    draw() {
+        ctx.beginPath();
+        ctx.strokeStyle = this.color;
+        ctx.lineWidth = 3;
+        ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
+        ctx.stroke();
+    }
+
+    checkBounds() {
+        if (this.x + this.size >= width) {
+            this.x -= this.size;
+        }
+
+        if (this.x - this.size <= 0) {
+            this.x += this.size;
+        }
+
+        if (this.y + this.size >= height) {
+            this.y -= this.size;
+        }
+
+        if (this.y - this.size <= 0) {
+            this.y += this.size;
+        }
+    }
+
+    collisionDetect() {
+        for (const ball of balls) {
+            if (ball.exists) {
+                const dx = this.x - ball.x;
+                const dy = this.y - ball.y;
+                const distance = Math.sqrt(dx * dx + dy * dy);
+        
+                if (distance < this.size + ball.size) {
+                    ball.exists = false;
+                }
+            }
+        }
+    }
 }
 
 class Ball extends Shape {
