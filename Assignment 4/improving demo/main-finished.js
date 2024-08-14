@@ -6,6 +6,10 @@ const ctx = canvas.getContext("2d");
 const width = (canvas.width = window.innerWidth);
 const height = (canvas.height = window.innerHeight);
 
+// ball counter
+const counter = document.querySelector("p");
+let ballCount = 0;
+
 // function to generate random number
 
 function random(min, max) {
@@ -49,8 +53,7 @@ class EvilCircle extends Shape {
                 this.y += this.velY;
                 break;
             }
-          });
-          
+          });  
     }
 
     draw() {
@@ -88,6 +91,8 @@ class EvilCircle extends Shape {
         
                 if (distance < this.size + ball.size) {
                     ball.exists = false;
+                    ballCount--;
+                    counter.textContent = `Ball count: ${ballCount}`;
                 }
             }
         }
@@ -162,6 +167,8 @@ while (balls.length < 25) {
   );
 
   balls.push(ball);
+  ballCount++;
+  counter.textContent = `Ball count: ${ballCount}`;
 }
 
 const evilCircle = new EvilCircle(50, 50, true);
