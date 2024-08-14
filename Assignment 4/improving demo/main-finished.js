@@ -164,6 +164,8 @@ while (balls.length < 25) {
   balls.push(ball);
 }
 
+const evilCircle = new EvilCircle(50, 50, true);
+
 function loop() {
   ctx.fillStyle = "rgba(0, 0, 0, 0.25)";
   ctx.fillRect(0, 0, width, height);
@@ -173,6 +175,12 @@ function loop() {
     ball.update();
     ball.collisionDetect();
   }
+  
+  // evil circle
+  evilCircle.draw();
+  evilCircle.checkBounds();
+  evilCircle.collisionDetect();
+
 
   requestAnimationFrame(loop);
 }
